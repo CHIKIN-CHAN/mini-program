@@ -1,0 +1,25 @@
+<!--commons/components/common-content-box/common-content-box.wxml-->
+
+<!-- 引入items模板 -->
+<import src="../../templates/items.wxml"/>
+
+<view class="common-content-box">
+    <view class="content-header">
+        <view class="title">
+            <view class="title-icon" style="background-position: {{type_info.icon.x}}rpx {{type_info.icon.y}}rpx"></view>
+            <text class="text-large">{{type_info.title}}</text>
+        </view>
+        <navigator class="control" url="{{type_info.control_link}}">
+            {{type_info.control_title || '更多'}}
+            <view class="control-icon"></view>
+        </navigator>
+    </view>
+    <view class="content">
+        <!-- <block></block>包着数据循环生成的模板 -->
+        <block wx:for="{{items}}" wx:key="{{item.id}}"> 
+            <!--items为请求到的在properties里定义好名字和类型的数据集合,items循环出item,item即是data中定义的数据-->
+            <template wx:if="{{index < (type_info.item_type !== 'four' ? 3 : 4)}}" data="{{item: item}}" is="{{type_info.item_type !== 'four' ? 'common-item' : 'four-item'}}"></template>
+        </block>
+        
+    </view>
+</view>

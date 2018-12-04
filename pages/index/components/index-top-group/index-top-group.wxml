@@ -1,0 +1,8 @@
+<view class="index-top-group">
+    <!-- banner -->
+    <index-banner imgUrls="{{datas.banner}}"></index-banner>
+    <!-- 人气M音 -->
+    <common-content-box type="sound" items="{{datas.sound}}"></common-content-box>
+    <!-- 频道 -->
+    <common-content-box type="channel" items="{{datas.channel}}"></common-content-box>
+</view>

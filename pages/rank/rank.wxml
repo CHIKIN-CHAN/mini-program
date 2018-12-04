@@ -1,0 +1,24 @@
+<!--pages/rank/rank.wxml-->
+<view class="rank">
+    <view class="page-title">
+        排行榜
+    </view>
+    <view class="rank-list">
+        <block wx:for="{{info}}" wx:key="{{item.album.id}}">
+            <!-- bindtap="绑定的函数名": 在渲染层的组件中加入事件绑定，当事件被触发时，就会执行 Page 中定义的事件处理函数。 -->
+            <view data-id="{{item.album.id}}" class="rank-item" bindtap="toAlbumList">
+                <view class="image-box">
+                    <image src="{{'http://static.missevan.com/coversmini/' + item.album.cover_image}}"></image>
+                    <view class="count">{{item.album.music_count}}</view>
+                </view>
+                <view class="sound-list">
+                    <!-- 使用 wx:for-item 可以指定数组当前元素的变量名 --> 
+                    <!-- item.sounds之所以再遍历一遍才拿到数据是因为sounds是套在info里的数组对象，item.album是对象，在第一次对info的遍历后可通过点语法直接调用里边的数据 -->
+                    <block wx:for="{{item.sounds}}" wx:for-item="music" wx:key="{{music.id}}">
+                        <text>{{music.soundstr}}</text>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="page index">
+    <!-- 首页前三组件组成的组件集合 -->
+    <app-index-top-group></app-index-top-group>
+    <block wx:for="{{music}}" wx:key="{{item.id}}">
+        <common-content-box type="{{item.id}}" items="{{item.objects_point}}"></common-content-box>
+    </block>
+    
+
+</view>

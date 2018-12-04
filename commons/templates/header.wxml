@@ -1,0 +1,14 @@
+<template name="head">
+    <view class="app-head">
+        
+    </view>
+</template>
+
+<!-- 在首页引入公共模板 自定义头部组件-->
+<!-- <import src="/commons/template/header.wxml"></import> -->
+
+<!--index.wxml-->
+<!-- <view class="page index">
+    <template is="head"/>
+
+</view> -->

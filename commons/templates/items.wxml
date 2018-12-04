@@ -1,0 +1,24 @@
+<!-- 模板样式在引用模板的页面中编写 -->
+<template name="common-item">
+    <view class="common-item">
+        <view class="image-box">
+            <image src="{{'http://static.missevan.com/coversmini/' + item.cover_image}}"></image>
+        </view>
+        <view class="title">{{item.soundstr}}</view>
+        <view class="info">
+            <view class="play-count">{{item.view_count_formatted || item.view_count}}</view>
+            <view class="comment-count">{{item.comment_count}}</view>
+        </view>
+    </view>
+</template>
+
+
+<template name="four-item">
+    <view class="four-item">
+        <view class="image-box">
+            <image src="https://static.missevan.com/mtags/201512/01/02b03508085127e1d3ed56561c632fa2100757.jpg"></image>
+            <view class="count">68767</view>
+        </view>
+        <view class="title">如果</view>
+    </view>
+</template>
