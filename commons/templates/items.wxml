@@ -2,7 +2,7 @@
 <template name="common-item">
     <view class="common-item">
         <view class="image-box">
-            <image src="{{'http://static.missevan.com/coversmini/' + item.cover_image}}"></image>
+            <image src="{{item.front_cover || 'http://static.missevan.com/coversmini/' + item.cover_image}}"></image>
         </view>
         <view class="title">{{item.soundstr}}</view>
         <view class="info">
@@ -16,9 +16,12 @@
 <template name="four-item">
     <view class="four-item">
         <view class="image-box">
-            <image src="https://static.missevan.com/mtags/201512/01/02b03508085127e1d3ed56561c632fa2100757.jpg"></image>
-            <view class="count">68767</view>
+            <image src="{{item.smallpic}}"></image>
+            <view class="count">
+                <view class="label"></view>
+                <view class="font">{{item.follow_num}}</view>
+            </view>
         </view>
-        <view class="title">如果</view>
+        <view class="title">{{item.name}}</view>
     </view>
 </template>

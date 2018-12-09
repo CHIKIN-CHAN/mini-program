@@ -125,6 +125,17 @@
   height: 40rpx;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
   color: #fff;
+  overflow: hidden;
+}
+.four-item .image-box .count .font{
+  padding-top: 5rpx;
+  float: right;
+}
+.four-item .image-box .count .label{
+  display: inline-block;
+  width: 40rpx;
+  height:40rpx;
+  background: url("http://static.missevan.com/assets/m/images/build/sprite-icons-thumbnails@2x.f1c29abf.png") no-repeat -80rpx -100rpx;
 }
 .four-item .title {
   color: #616161;

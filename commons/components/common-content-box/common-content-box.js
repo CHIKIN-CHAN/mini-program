@@ -21,7 +21,7 @@ Component({
   attached () {//组件生命周期函数，在组件实例进入页面节点树时执行
     // 获取config中的types数据,[this.data.type]为拿上方定义的type: String，对应的是config中的"sound"
     // console.log(this)
-    this.setData({type_info: config.types[this.data.type]})//提取整个API的sound/channel等部分数据
+    this.setData({type_info: config.types[this.data.type]})//提取整个API的sound和channel的数据
     // console.log(this.data.type)
   },
   /**
